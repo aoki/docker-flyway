@@ -11,4 +11,4 @@ RUN mkdir /opt \
   && sed -i 's/bash/sh/' /opt/flyway/flyway
 
 ENTRYPOINT ["flyway"]
-
+WORKDIR /app

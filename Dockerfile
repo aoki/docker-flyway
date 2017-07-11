@@ -10,5 +10,7 @@ RUN mkdir /opt \
   && mv /opt/flyway-${FLYWAY_VERSION} /opt/flyway \
   && sed -i 's/bash/sh/' /opt/flyway/flyway
 
+VOLUME ["/app", "/opt/flyway/conf", "/opt/flyway/sql"]
+
 ENTRYPOINT ["flyway"]
 WORKDIR /app
